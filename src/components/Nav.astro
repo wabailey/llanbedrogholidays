@@ -1,0 +1,195 @@
+---
+import Button from "./Button.astro";
+---
+
+<nav class="absolute w-full z-10 mx-auto px-[5%] py-6">
+	<div class="container mx-auto flex items-center justify-between">
+		<a
+			href="/"
+			aria-label="Go to homepage"
+			class="tablet:hidden focus:outline-none focus-visible:ring-4 ring-dark-blue rounded-sm ring-offset-4 ring-offset-light-yellow transition-transform duration-200 ease-in hover:scale-105"
+		>
+			<img
+				src="./assets/llanbedrog-holidays-left.svg"
+				alt="Llanbedrog Holidays Logo"
+				width="128"
+				height="50"
+			/>
+		</a>
+		<button
+			id="menuopen"
+			aria-expanded="false"
+			aria-label="Open Menu"
+			class="tablet:hidden focus:outline-none focus-visible:ring-4 ring-dark-blue rounded-sm ring-offset-4 ring-offset-light-yellow text-white transition-transform duration-200 ease-in hover:scale-125"
+		>
+			<svg
+				xmlns="http://www.w3.org/2000/svg"
+				fill="none"
+				viewBox="0 0 24 24"
+				stroke-width="1.5"
+				stroke="currentColor"
+				class="w-8 h-8"
+			>
+				<path
+					stroke-linecap="round"
+					stroke-linejoin="round"
+					d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
+			</svg>
+		</button>
+		<div
+			role="menubar"
+			class="hidden bg-white flex-col gap-8 absolute right-0 left-0 top-0 text-center items-center tablet:flex tablet:flex-row tablet:top-0 tablet:bg-transparent tablet:justify-between tablet:px-[5%] tablet:py-6 tablet:w-full"
+		>
+			<div class="hidden desktop:flex gap-6">
+				<a href="">
+					<svg
+						viewBox="0 0 16 16"
+						class="h-6 w-6 fill-white transition-transform duration-200 ease-in hover:scale-110"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<path
+							d="M1.45455 0C0.658909 0 0 0.658909 0 1.45455V14.5455C0 15.3411 0.658909 16 1.45455 16H14.5455C15.3411 16 16 15.3411 16 14.5455V1.45455C16 0.658909 15.3411 0 14.5455 0H1.45455ZM1.45455 1.45455H14.5455V14.5455H10.7724V9.63636H12.6589L12.9316 7.45455H10.7731V6.04509C10.7731 5.40945 10.9287 4.97745 11.8407 4.97745H13.0225V3C12.8211 2.97455 12.1222 2.93164 11.3185 2.93164C9.64218 2.93164 8.50036 3.94036 8.50036 5.81818V7.45455H6.59127V9.63636H8.49964V14.5455H1.45455V1.45455Z"
+						></path>
+					</svg>
+				</a>
+				<a href="">
+					<svg
+						viewBox="0 0 16 16"
+						class="h-6 w-6 fill-white transition-transform duration-200 ease-in hover:scale-110"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<path
+							fill-rule="evenodd"
+							clip-rule="evenodd"
+							d="M11.6659 9.58801C11.4662 9.48868 10.4876 9.01001 10.3054 8.94335C10.1231 8.87735 9.99051 8.84468 9.85721 9.04335C9.72457 9.24068 9.34341 9.68734 9.22753 9.81934C9.11097 9.95201 8.99508 9.96801 8.79613 9.86934C8.59717 9.76934 7.95543 9.56068 7.19513 8.88601C6.60363 8.36068 6.20371 7.71201 6.08782 7.51335C5.97193 7.31535 6.0751 7.20802 6.17491 7.10935C6.26467 7.02068 6.37386 6.87802 6.47367 6.76268C6.57348 6.64668 6.60631 6.56402 6.67262 6.43135C6.73961 6.29935 6.70612 6.18402 6.65588 6.08468C6.60631 5.98535 6.2084 5.01002 6.04227 4.61335C5.88083 4.22735 5.71671 4.28002 5.5948 4.27335C5.47824 4.26802 5.3456 4.26669 5.21297 4.26669C5.08033 4.26669 4.86463 4.31602 4.68243 4.51469C4.49955 4.71269 3.98576 5.19202 3.98576 6.16735C3.98576 7.14202 4.6985 8.08401 4.79831 8.21668C4.89813 8.34868 6.2017 10.35 8.1986 11.208C8.67421 11.412 9.04465 11.534 9.33337 11.6247C9.81032 11.776 10.2444 11.7547 10.5874 11.7033C10.9692 11.6467 11.765 11.224 11.9311 10.7613C12.0966 10.2987 12.0966 9.90201 12.047 9.81934C11.9975 9.73668 11.8648 9.68734 11.6652 9.58801H11.6659ZM8.03381 14.5233H8.03113C6.84507 14.5236 5.68079 14.2062 4.66032 13.6047L4.41916 13.462L1.91249 14.1167L2.5817 11.6847L2.42428 11.4353C1.76119 10.3849 1.41028 9.1692 1.4121 7.92868C1.41344 4.29535 4.38366 1.33936 8.03649 1.33936C9.80496 1.33936 11.4676 2.02602 12.7176 3.27136C13.3341 3.88241 13.8228 4.60906 14.1553 5.40928C14.4878 6.2095 14.6576 7.0674 14.6549 7.93335C14.6535 11.5667 11.6833 14.5233 8.03381 14.5233V14.5233ZM13.6688 2.32536C12.9307 1.58597 12.0525 0.999717 11.0851 0.60056C10.1178 0.201403 9.08038 -0.00271749 8.03314 2.73183e-05C3.64278 2.73183e-05 0.0683272 3.55669 0.0669875 7.92801C0.0649531 9.31918 0.43165 10.6863 1.13008 11.8913L0 16L4.22289 14.8973C5.39107 15.5307 6.70015 15.8626 8.03046 15.8627H8.03381C12.4242 15.8627 15.9986 12.306 16 7.93401C16.0032 6.8922 15.7988 5.86008 15.3987 4.89737C14.9986 3.93466 14.4106 3.06047 13.6688 2.32536"
+						></path>
+					</svg>
+				</a>
+			</div>
+			<a
+				role="menuitem"
+				aria-label="Go to homepage"
+				class="tablet:hidden mb-8 mt-16 focus:outline-none focus-visible:ring-4 ring-dark-blue rounded-sm ring-offset-4 ring-offset-light-yellow transition-transform duration-200 ease-in hover:scale-105"
+				href="/"
+			>
+				<img
+					src="./assets/llanbedrog-holidays-centre-blue.svg"
+					alt="Llanbedrog Holidays Logo"
+					width="168"
+					height="64"
+				/>
+			</a>
+			<a
+				role="menuitem"
+				class="relative text-label-lg tablet:text-label-sm desktop:text-label-lg uppercase text-dark-blue tablet:text-white/90 focus:outline-none focus-visible:ring-4 ring-dark-blue rounded-sm ring-offset-4 ring-offset-light-yellow after:absolute after:w-full after:scale-x-0 after:h-0.5 after:-bottom-0.5 after:left-0 after:bg-dark-blue tablet:after:bg-white after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left"
+				href="#">Property</a
+			>
+			<a
+				role="menuitem"
+				class="relative text-label-lg tablet:text-label-sm desktop:text-label-lg uppercase text-dark-blue tablet:text-white/90 focus:outline-none focus-visible:ring-4 ring-dark-blue rounded-sm ring-offset-4 ring-offset-light-yellow after:absolute after:w-full after:scale-x-0 after:h-0.5 after:-bottom-0.5 after:left-0 after:bg-dark-blue tablet:after:bg-white after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left"
+				href="#">Photo Gallery</a
+			>
+			<a
+				role="menuitem"
+				aria-label="Go to homepage"
+				class="hidden tablet:inline focus:outline-none focus-visible:ring-4 ring-dark-blue rounded-sm ring-offset-4 ring-offset-light-yellow transition-transform duration-200 ease-in hover:scale-105"
+				href="/"
+			>
+				<img
+					src="./assets/llanbedrog-holidays-centre.svg"
+					alt="Llanbedrog Holidays Logo"
+					width="128"
+					height="50"
+				/>
+			</a>
+			<a
+				role="menuitem"
+				class="relative text-label-lg tablet:text-label-sm desktop:text-label-lg uppercase text-dark-blue tablet:text-white/90 focus:outline-none focus-visible:ring-4 ring-dark-blue rounded-sm ring-offset-4 ring-offset-light-yellow after:absolute after:w-full after:scale-x-0 after:h-0.5 after:-bottom-0.5 after:left-0 after:bg-dark-blue tablet:after:bg-white after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left"
+				href="#">Local Area</a
+			>
+			<a
+				role="menuitem"
+				class="relative text-label-lg tablet:text-label-sm desktop:text-label-lg uppercase text-dark-blue tablet:text-white/90 focus:outline-none focus-visible:ring-4 ring-dark-blue rounded-sm ring-offset-4 ring-offset-light-yellow after:absolute after:w-full after:scale-x-0 after:h-0.5 after:-bottom-0.5 after:left-0 after:bg-dark-blue tablet:after:bg-white after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left"
+				href="#">Location</a
+			>
+			<a role="menuitem" class="hidden desktop:block" href="#">
+				<Button intent={"whiteBorderSerif"}>Book Now</Button>
+			</a>
+			<a role="menuitem" class="tablet:hidden mt-8" href="#">
+				<Button intent={"darkBlueBorderSerif"}>Book Now</Button>
+			</a>
+			<div class="tablet:hidden flex gap-10 mb-16">
+				<a href="">
+					<svg
+						viewBox="0 0 16 16"
+						class="h-6 w-6 transition-transform duration-200 ease-in hover:scale-125"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<path
+							d="M1.45455 0C0.658909 0 0 0.658909 0 1.45455V14.5455C0 15.3411 0.658909 16 1.45455 16H14.5455C15.3411 16 16 15.3411 16 14.5455V1.45455C16 0.658909 15.3411 0 14.5455 0H1.45455ZM1.45455 1.45455H14.5455V14.5455H10.7724V9.63636H12.6589L12.9316 7.45455H10.7731V6.04509C10.7731 5.40945 10.9287 4.97745 11.8407 4.97745H13.0225V3C12.8211 2.97455 12.1222 2.93164 11.3185 2.93164C9.64218 2.93164 8.50036 3.94036 8.50036 5.81818V7.45455H6.59127V9.63636H8.49964V14.5455H1.45455V1.45455Z"
+							fill="#222433"></path>
+					</svg>
+				</a>
+				<a href="">
+					<svg
+						viewBox="0 0 16 16"
+						class="h-6 w-6 transition-transform duration-200 ease-in hover:scale-125"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<path
+							fill-rule="evenodd"
+							clip-rule="evenodd"
+							d="M11.6659 9.58801C11.4662 9.48868 10.4876 9.01001 10.3054 8.94335C10.1231 8.87735 9.99051 8.84468 9.85721 9.04335C9.72457 9.24068 9.34341 9.68734 9.22753 9.81934C9.11097 9.95201 8.99508 9.96801 8.79613 9.86934C8.59717 9.76934 7.95543 9.56068 7.19513 8.88601C6.60363 8.36068 6.20371 7.71201 6.08782 7.51335C5.97193 7.31535 6.0751 7.20802 6.17491 7.10935C6.26467 7.02068 6.37386 6.87802 6.47367 6.76268C6.57348 6.64668 6.60631 6.56402 6.67262 6.43135C6.73961 6.29935 6.70612 6.18402 6.65588 6.08468C6.60631 5.98535 6.2084 5.01002 6.04227 4.61335C5.88083 4.22735 5.71671 4.28002 5.5948 4.27335C5.47824 4.26802 5.3456 4.26669 5.21297 4.26669C5.08033 4.26669 4.86463 4.31602 4.68243 4.51469C4.49955 4.71269 3.98576 5.19202 3.98576 6.16735C3.98576 7.14202 4.6985 8.08401 4.79831 8.21668C4.89813 8.34868 6.2017 10.35 8.1986 11.208C8.67421 11.412 9.04465 11.534 9.33337 11.6247C9.81032 11.776 10.2444 11.7547 10.5874 11.7033C10.9692 11.6467 11.765 11.224 11.9311 10.7613C12.0966 10.2987 12.0966 9.90201 12.047 9.81934C11.9975 9.73668 11.8648 9.68734 11.6652 9.58801H11.6659ZM8.03381 14.5233H8.03113C6.84507 14.5236 5.68079 14.2062 4.66032 13.6047L4.41916 13.462L1.91249 14.1167L2.5817 11.6847L2.42428 11.4353C1.76119 10.3849 1.41028 9.1692 1.4121 7.92868C1.41344 4.29535 4.38366 1.33936 8.03649 1.33936C9.80496 1.33936 11.4676 2.02602 12.7176 3.27136C13.3341 3.88241 13.8228 4.60906 14.1553 5.40928C14.4878 6.2095 14.6576 7.0674 14.6549 7.93335C14.6535 11.5667 11.6833 14.5233 8.03381 14.5233V14.5233ZM13.6688 2.32536C12.9307 1.58597 12.0525 0.999717 11.0851 0.60056C10.1178 0.201403 9.08038 -0.00271749 8.03314 2.73183e-05C3.64278 2.73183e-05 0.0683272 3.55669 0.0669875 7.92801C0.0649531 9.31918 0.43165 10.6863 1.13008 11.8913L0 16L4.22289 14.8973C5.39107 15.5307 6.70015 15.8626 8.03046 15.8627H8.03381C12.4242 15.8627 15.9986 12.306 16 7.93401C16.0032 6.8922 15.7988 5.86008 15.3987 4.89737C14.9986 3.93466 14.4106 3.06047 13.6688 2.32536"
+							fill="#222433"></path>
+					</svg>
+				</a>
+			</div>
+			<div class="tablet:hidden">
+				<button
+					id="menuclose"
+					aria-expanded="true"
+					aria-label="Close Menu"
+					class="absolute top-8 right-[5%] focus:outline-none focus-visible:ring-4 ring-dark-blue rounded-sm ring-offset-4 ring-offset-light-yellow text-black transition-transform duration-200 ease-in hover:scale-125"
+				>
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						fill="none"
+						viewBox="0 0 24 24"
+						stroke-width="1.5"
+						stroke="currentColor"
+						class="w-8 h-8"
+					>
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							d="M6 18L18 6M6 6l12 12"></path>
+					</svg>
+				</button>
+			</div>
+		</div>
+	</div>
+</nav>
+
+<script>
+	const navOpenBtn = document.querySelector("#menuopen");
+	const navCloseBtn = document.querySelector("#menuclose");
+	const menuBar = document.querySelector(`[role="menubar"]`);
+
+	navOpenBtn.addEventListener("click", () => {
+		navOpenBtn.setAttribute(
+			"aria-expanded",
+			navOpenBtn.getAttribute("aria-expanded") === "true" ? "false" : "true"
+		);
+		menuBar.classList.toggle("hidden");
+		menuBar.classList.toggle("flex");
+	});
+
+	navCloseBtn.addEventListener("click", () => {
+		navCloseBtn.setAttribute(
+			"aria-expanded",
+			navCloseBtn.getAttribute("aria-expanded") === "false" ? "true" : "false"
+		);
+		menuBar.classList.toggle("hidden");
+		menuBar.classList.toggle("flex");
+	});
+</script>

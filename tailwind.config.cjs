@@ -1,0 +1,50 @@
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
+	theme: {
+		screens: {
+			tablet: "660px",
+			laptop: "900px",
+			desktop: "1200px",
+			xl: "1900px",
+		},
+		fontFamily: {
+			sans: ["'Nunito Sans'", "sans-serif"],
+			serif: ["Cardo", "serif"],
+		},
+		extend: {
+			colors: {
+				black: "#000000",
+				white: "#FFFFFF",
+				"dark-yellow": "#89621B",
+				"light-yellow": "#FFEFC5",
+				"dark-blue": "#222433",
+				"light-blue": "#626680",
+			},
+			fontSize: {
+				"hero-xl": ["64px", { lineHeight: "80px", letterSpacing: "-1.5px", fontWeight: "400" }],
+				"hero-lg": ["48px", { lineHeight: "64px", letterSpacing: "-1px", fontWeight: "400" }],
+				"hero-md": ["40px", { lineHeight: "56px", letterSpacing: "-0.5px", fontWeight: "400" }],
+				"hero-sm": ["32px", { lineHeight: "48px", letterSpacing: "-0.5px", fontWeight: "400" }],
+				"h2-xl": ["64px", { lineHeight: "72px", letterSpacing: "-0.5px", fontWeight: "700" }],
+				"h2-lg": ["48px", { lineHeight: "56px", letterSpacing: "-0.5px", fontWeight: "700" }],
+				"h2-md": ["32px", { lineHeight: "40px", letterSpacing: "-0.5px", fontWeight: "700" }],
+				"h2-sm": ["24px", { lineHeight: "32px", letterSpacing: "-0.5px", fontWeight: "700" }],
+				"h3": ["20px", { lineHeight: "28px", letterSpacing: "1px", fontWeight: "700" }],
+				"body-lg-serif": ["26px", { lineHeight: "39px", letterSpacing: "0px", fontWeight: "400" }],
+				"body-serif": ["16px", { lineHeight: "24px", letterSpacing: "0px", fontWeight: "400" }],
+				"body-sm-serif": ["14px", { lineHeight: "19px", letterSpacing: "0.5px", fontWeight: "400" }],
+				"body-lg": ["20px", { lineHeight: "28px", letterSpacing: "0.5px", fontWeight: "400" }],
+				"body": ["16px", { lineHeight: "24px", letterSpacing: "0.5px", fontWeight: "400" }],
+				"list-body": ["16px", { lineHeight: "32px", letterSpacing: "0.5px", fontWeight: "400" }],
+				"label-lg": ["14px", { lineHeight: "18px", letterSpacing: "1.4px", fontWeight: "700" }],
+				"label-sm": ["12px", { lineHeight: "16px", letterSpacing: "1.2px", fontWeight: "700" }],
+				"subtitle-lg": ["14px", { lineHeight: "19px", letterSpacing: "0.2em", fontWeight: "600" }],
+				"subtitle-sm": ["12px", { lineHeight: "16px", letterSpacing: "0.2em", fontWeight: "600" }],
+				"caption-lg": ["12px", { lineHeight: "19px", letterSpacing: "0.5px", fontWeight: "400" }],
+				"caption-sm": ["10px", { lineHeight: "16px", letterSpacing: "0.5px", fontWeight: "400" }],
+			},
+		},
+	},
+	plugins: [],
+}

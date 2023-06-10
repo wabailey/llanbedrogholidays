@@ -1,0 +1,182 @@
+---
+import type { HTMLAttributes } from "astro/types";
+import { cva, type VariantProps } from "class-variance-authority";
+
+const button = cva(
+	"uppercase box-border border-[3px] focus:outline-none focus-visible:ring-4 ring-offset-4",
+	{
+		variants: {
+			intent: {
+				blueSerif: [
+					"py-3",
+					"px-5",
+					"bg-light-blue",
+					"font-serif",
+					"text-label-lg",
+					"text-white",
+					"border-light-blue",
+					"transition-colors",
+					"hover:bg-transparent",
+					"hover:text-dark-blue",
+				],
+				blueBorderSerif: [
+					"py-3",
+					"px-5",
+					"bg-transparent",
+					"font-serif",
+					"text-label-lg",
+					"text-white",
+					"border-light-blue",
+					"transition-colors",
+					"hover:bg-light-blue",
+				],
+				blueSans: [
+					"py-3",
+					"px-5",
+					"bg-light-blue",
+					"font-sans",
+					"text-label-lg",
+					"text-white",
+					"border-light-blue",
+					"transition-colors",
+					"hover:bg-transparent",
+					"hover:text-dark-blue",
+				],
+				blueBorderSans: [
+					"py-3",
+					"px-5",
+					"bg-transparent",
+					"font-sans",
+					"text-label-lg",
+					"text-white",
+					"border-light-blue",
+					"transition-colors",
+					"hover:bg-light-blue",
+				],
+				yellowSerif: [
+					"py-3",
+					"px-5",
+					"bg-dark-yellow",
+					"font-serif",
+					"text-label-lg",
+					"text-white",
+					"border-dark-yellow",
+					"transition-colors",
+					"hover:bg-transparent",
+					"hover:text-dark-yellow",
+				],
+				yellowBorderSerif: [
+					"py-3",
+					"px-5",
+					"bg-transparent",
+					"font-serif",
+					"text-label-lg",
+					"text-white",
+					"border-dark-yellow",
+					"transition-colors",
+					"hover:bg-dark-yellow",
+				],
+				yellowSans: [
+					"py-3",
+					"px-5",
+					"bg-dark-yellow",
+					"font-sans",
+					"text-label-lg",
+					"text-white",
+					"border-dark-yellow",
+					"transition-colors",
+					"hover:bg-transparent",
+					"hover:text-dark-yellow",
+				],
+				yellowBorderSans: [
+					"py-3",
+					"px-5",
+					"bg-transparent",
+					"font-sans",
+					"text-label-lg",
+					"text-white",
+					"border-dark-yellow",
+					"transition-colors",
+					"hover:bg-dark-yellow",
+				],
+				darkBlueBorderSans: [
+					"py-3",
+					"px-5",
+					"bg-transparent",
+					"font-sans",
+					"text-label-lg",
+					"text-dark-blue",
+					"border-dark-blue",
+					"transition-colors",
+					"hover:bg-dark-blue",
+					"hover:text-white",
+				],
+				darkBlueBorderSerif: [
+					"py-3",
+					"px-5",
+					"bg-transparent",
+					"font-serif",
+					"text-label-lg",
+					"text-dark-blue",
+					"border-dark-blue",
+					"transition-colors",
+					"hover:bg-dark-blue",
+					"hover:text-white",
+				],
+				whiteBorderSans: [
+					"py-3",
+					"px-5",
+					"bg-transparent",
+					"font-sans",
+					"text-label-lg",
+					"text-white",
+					"border-white",
+					"transition-colors",
+					"hover:bg-white",
+					"hover:text-dark-blue",
+				],
+				whiteBorderSerif: [
+					"py-3",
+					"px-5",
+					"bg-transparent",
+					"font-serif",
+					"text-label-lg",
+					"text-white",
+					"border-white",
+					"transition-colors",
+					"hover:bg-white",
+					"hover:text-dark-blue",
+				],
+				yellowBadge: [
+					"p-2",
+					"bg-dark-yellow",
+					"font-sans",
+					"text-label-lg",
+					"text-white",
+					"border-dark-yellow",
+					"transition-colors",
+					"hover:bg-white",
+					"hover:text-dark-yellow",
+				],
+			},
+		},
+		defaultVariants: {
+			intent: "blueSerif",
+		},
+	}
+);
+
+export interface Props
+	extends HTMLAttributes<"button">,
+		VariantProps<typeof button> {}
+
+/**
+ * For Astro components, we recommend setting your defaultVariants within
+ * Astro.props (which are `undefined` by default)
+ */
+const { intent = "blueSerif" } = Astro.props;
+---
+
+<button class={button({ intent })}>
+	<slot />
+</button>
